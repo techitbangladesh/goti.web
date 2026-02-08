@@ -1,0 +1,43 @@
+
+export type Language = 'en' | 'bn';
+export type Theme = 'light' | 'dark';
+
+export interface Package {
+  id: string;
+  nameEn: string;
+  nameBn: string;
+  durationEn: string;
+  durationBn: string;
+  price: number;
+}
+
+export interface User {
+  name: string;
+  email: string;
+  phone: string;
+  activePackage?: string;
+  expiryDate?: string;
+}
+
+export interface TranslationStrings {
+  logo: string;
+  heroHeadline: string;
+  heroSubheadline: string;
+  buyBtn: string;
+  loginBtn: string;
+  packagesTitle: string;
+  loginPrompt: string;
+  loginViaWA: string;
+  profileTitle: string;
+  activePack: string;
+  expiry: string;
+  editProfile: string;
+  save: string;
+  langLabel: string;
+  themeLabel: string;
+  benefits: {
+    speed: { title: string; desc: string };
+    price: { title: string; desc: string };
+    flex: { title: string; desc: string };
+  };
+}
